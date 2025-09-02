@@ -727,6 +727,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
             error={errors.rateOfInterest}
             placeholder="e.g., 12"
             min="0"
+            step="0.01"
             required
           />
           
