@@ -10,6 +10,7 @@ interface InputFieldProps {
   placeholder?: string;
   required?: boolean;
   min?: string;
+  step?: string;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -21,7 +22,8 @@ const InputField: React.FC<InputFieldProps> = ({
   error,
   placeholder,
   required = false,
-  min
+  min,
+  step
 }) => {
   return (
     <div className="group">
@@ -35,6 +37,7 @@ const InputField: React.FC<InputFieldProps> = ({
         onChange={onChange}
         placeholder={placeholder}
         min={min}
+        step={step}
         className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-opacity-20 transition-all duration-200 ${
           error 
             ? 'border-red-300 focus:border-red-500 focus:ring-red-500' 
